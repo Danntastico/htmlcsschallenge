@@ -31,11 +31,71 @@
                  <li><button> Sort by<i class="fas fa-arrow-down"></i></button></li>
                  <li><button>Filters<i class="fas fa-bars"></i></button></li>
              </ul>
-             <button id="add-employee">Add employee</button>
+             <button id="addEmployee">Add employee</button>
          </nav>
-            
-
-        
+         <div class="dashboard">
+             <section id="employees-profile">
+                 <ul>
+                     <li>
+                         <div class="info-card">
+                             <div class="info-card-header">
+                                <h2>Juan David Rodriguez</h2>
+                                <h3>Senior Technician</h3>
+                             </div>
+                             <div class="info-card-container">
+                                 <section id="infoCardProjectForm">
+                                    <form action="">
+                                        <label for="projectName">Project</label>
+                                        <input list="projects" name="project-name" value="McClatchy">
+                                        <datalist id="project-list">
+                                           <option value="McClatchy"></option>
+                                           <option value="Project2"></option>
+                                           <option value="Project3"></option>
+                                        </datalist>
+                                    </form>
+                                 </section>
+                                 <section id="infoCardStacks">
+                                    <h3>Stacks</h3>
+                                    <ul id="stacksList">
+                                        <li class="back-end">Backend</li>
+                                        <li class="mobile">Mobile</li>
+                                        <li class="front-end">Front End</li>
+                                    </ul>
+                                 </section>
+                                 <section id="infoCardTechnologies">
+                                     <ul id="technologiesList">
+                                         <li class="back-end">Java</li>
+                                         <li class="back-end">.Net</li>
+                                         <li class="front-end">Angular</li>
+                                         <li class="front-end">React</li>
+                                     </ul>
+                                 </section>
+                             </div>
+                         </div>
+                     </li>
+                     <li>   
+                        <div class="info-card">
+                            <div class="info-card-header">
+                               <h2>Work information</h2>
+                            </div>
+                            <div class="info-card-container">
+                                <section id="infoCardWorkInfo">
+                                   <form>
+                                       <label for="projectName">Project</label>
+                                       <input list="projects" name="project-name" value="McClatchy">
+                                       <datalist id="project-list">
+                                          <option value="McClatchy"></option>
+                                          <option value="Project2"></option>
+                                          <option value="Project3"></option>
+                                       </datalist>
+                                   </form>
+                                </section>
+                            </div>
+                        </div>
+                     </li>
+                 </ul>
+             </section>
+         </div>
         <script src="https://kit.fontawesome.com/be030012a7.js" crossorigin="anonymous"></script>
     </body>
 </html>
