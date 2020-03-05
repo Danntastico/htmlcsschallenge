@@ -1,10 +1,87 @@
 /* Global Variables*/
-*{
-    font-family: 'Roboto', sans-serif;
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  --main-bg-color: #eae9e9;
+  --btn-color: #f56400;
+  --header-card-color: rgb(212, 212, 212);
+  --header-bg-color: #232020;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  width: 10%;
+}
+
+button{
+    
+}
+/*HEADER*/
+
+header {
+  display: flex;
+}
+
+div.contenido-header{
+    background-color: var(--header-bg-color);
 }
 
 
-/* HEADER */
+/* SECOND BAR */
+nav {
+  background-color: var(--header-card-color);
+}
+div.second-bar div ul{
+    float: left;
+}
+div.second-bar div button#addEmployee{
+    float: right;
+}
 
 
-/* SECOND BAR*/ 
+div.second-bar ul li {
+    display: inline;
+}
+
+button#addEmployee{
+    border: none;
+    background-color: var(--btn-color);
+    border-radius: .9em ;
+    padding: 0.1em 1.2em;
+    color: white;
+}
+.second-bar button{
+    border: none;
+    background-color: transparent;
+}
+
+
+/* DASHBOARD */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}

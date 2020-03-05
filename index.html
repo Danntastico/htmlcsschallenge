@@ -14,37 +14,52 @@
   </head>
   <body>
     <header>
-      <section class="navigation">
-        <img src="img/rubber-duck.png" alt="logo de la empresa" class="logo" />
-        <ul>
-          <li><a href="#" class="active">Employees</a></li>
-          <li><button>Employees</button></li>
-          <li><button>Budget</button></li>
-        </ul>
-      </section>
-      <section class="user-icons">
-        <ul>
-          <li>
-            <a href="#"><i class="fas fa-search"></i></a>
-          </li>
-          <li>
-            <a href="#" class="profile-icon"
-              >LS<i class="fas fa-arrow-down"></i
-            ></a>
-          </li>
-        </ul>
-      </section>
+      <div class="contenido-header ">
+        <div>
+          <ul class="navigation">
+            <li>
+              <img
+                src="img/rubber-duck.png"
+                alt="logo de la empresa"
+                class="logo"
+              />
+            </li>
+            <li><button>Employees</button></li>
+            <li><button>Budget</button></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="user-icons">
+            <li>
+              <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li>
+              <a href="#" class="profile-icon"
+                >LS<i class="fas fa-arrow-down"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <nav class="second-bar">
-      <ul>
-        <li>
-          <button>Sort by<i class="fas fa-arrow-down"></i></button>
-        </li>
-        <li>
-          <button>Filters<i class="fas fa-bars"></i></button>
-        </li>
-      </ul>
-      <button id="addEmployee">Add employee</button>
+    <nav>
+      <div class="second-bar clearfix">
+        <div>
+          <ul>
+            <li>
+              <button>Sort by <i class="fas fa-arrow-down"></i></button>
+            </li>
+            <li>
+              <button>Filters <i class="fas fa-bars"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button id="addEmployee">
+            <i class="fas fa-plus"></i> Add employee
+          </button>
+        </div>
+      </div>
     </nav>
     <div class="dashboard">
       <section id="employees-profile">
