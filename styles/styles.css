@@ -10,15 +10,17 @@ html {
   --second-bar-color: #FFFFFF;
   --header-card-color: #E0E8EB;
   --header-bg-color: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
-body {
-  background-color: var(--main-bg-color);
-  font-family: "Roboto", sans-serif;
+div {
+  content: '';
+  display: block;
+  clear: both;
 }
 li {
   list-style: none;
@@ -26,22 +28,46 @@ li {
 a {
   text-decoration: none;
 }
-.logo {
-  width: 10%;
+
+h1, h2, h3, p{
+  font-family: 'Roboto', sans-serif;
 }
 
-button{
-    
+.contenedor{
+  width: 90%;
+  margin: auto;
 }
+
+
+.filled-btn{
+  border: none;
+  background-color: var(--btn-color);
+  border-radius: 1.9em;
+  padding: 0.5em 1.9em;
+  color: white;
+}
+
+.filled-btn:hover {
+  color: var(--btn-color);
+  background-color: var(--main-bg-color);
+  transition: .5s ease;
+}
+
+.transparent-btn{
+  border: none;
+  background-color: transparent;
+  border-radius: 1.9em;
+  padding: 0.5em 1.9em;
+  color: var(--btn-color);
+}
+
+.transparent-btn:hover{
+  background-color: var(--btn-color);
+  transition: .5s ease;
+  color: white;
+}
+
 /*HEADER*/
-
-header {
-  display: flex;
-}
-
-div.contenido-header{
-    background-color: var(--header-bg-color);
-}
 
 
 /* SECOND BAR */
@@ -62,42 +88,128 @@ div.second-bar div ul li{
     padding: 0em .5em;
 }
 
-button#addEmployee{
-    border: none;
-    background-color: var(--btn-color);
-    border-radius: 1.9em;
-    padding: 0.5em 1.9em;
-    color: white;
-}
+
 .second-bar button{
     border: none;
     background-color: transparent;
 }
+#add-employee-btn{
+  border: none;
+  background-color: var(--btn-color);
+  border-radius: 1.9em;
+  padding: 0.5em 1.9em;
+  color: white;
+}
+
+#add-employee-btn:hover {
+  color: var(--btn-color);
+  background-color: var(--main-bg-color);
+  transition: .5s ease;
+}
 
 /* DASHBOARD */
 div.dashboard {
-    margin: 0.5em;
-    box-shadow: 0px 0px 10px 3px rgba(204,204,204,1);
-}
-section#employees-profile > div {
-    border-radius: 2.0em;
+    margin: 1em;
 }
 
+section{
+  content:'';
+  display: block;
+  clear:both;
+}
+
+section#employees-profile > div{
+  
+    border-radius: 1.0em;
+    box-shadow: 0px 0px 10px 3px rgba(204,204,204,1);
+    margin-bottom: 1.5em;
+}
+section#employees-profile > button{
+  float: right;
+}
+
+div.info-card-container section {
+  margin-bottom: 1.5em;
+}
 div.info-card div.info-card-header{
     background-color: var(--header-card-color);
 }
 
-div.info-card div.info-card-header>div{
-    margin:0.5em 1.6em;
+div.info-card div.info-card-header>div,
+div.info-card-container{
+    margin:0 1.6em 0 1.6em;
+}
+
+div.info-card-header>div,
+div.info-card-container{
+  padding: 1em 0 1em 0;
+}
+
+section#infoCardProjectForm{
+  display: flex;
+  justify-content: space-around;
+}
+
+section#infoCardProjectForm input{
+  width: 100%;
+  border-style: none;
+  border-bottom: solid 0.2px var(--header-card-color) ;
+  font-size: 1.0em;
+}
+  
+section#infoCardProjectForm  {
+   margin: 29px;
 }
 
 
-div.dashboard section#employees-profile ul li div h2{
-    
+#infoCardStacks ul,
+#infoCardTechnologies ul{
+  display: flex;
+}
+
+#infoCardTechnologies ul{
+  background-color: var(--header-card-color);
+  border-radius: 0.4em;
+}
+#infoCardStacks ul li,
+#infoCardTechnologies ul li{
+  box-shadow: 0px 0px 1px 1px rgb(156, 156, 156);
 }
 
 
 
+
+
+section#timeLine{
+  border-radius: 1.0em;
+  box-shadow: 0px 0px 10px 3px rgba(204,204,204,1);
+  margin-bottom: 1.5em;
+}
+
+#timeLine h1 {
+  margin
+}
+
+.back-end {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 0.5em;
+  padding: 0.4em;
+  margin: 0.2rem;
+}
+.front-end {
+  background-color: firebrick;
+  color: white;
+  border-radius: 0.5em;
+  padding: 0.4em;
+  margin: 0.2rem;
+}
+.mobile {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 0.4em;
+  margin: 0.2rem;
+}
 
 
 

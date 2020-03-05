@@ -1,276 +1,219 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="contenido-header ">
-        <div>
-          <ul class="navigation">
-            <li>
-              <img
-                src="img/rubber-duck.png"
-                alt="logo de la empresa"
-                class="logo"
-              />
-            </li>
-            <li><button>Employees</button></li>
-            <li><button>Budget</button></li>
-          </ul>
-        </div>
-        <div>
-          <ul class="user-icons">
-            <li>
-              <a href="#"><i class="fas fa-search"></i></a>
-            </li>
-            <li>
-              <a href="#" class="profile-icon"
-                >LS<i class="fas fa-arrow-down"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+  </header>
+  <nav>
+    <div class="second-bar">
+      <div>
+        <ul>
+          <li>
+            <button>Sort by <i class="fas fa-arrow-down"></i></button>
+          </li>
+          <li>
+            <button>Filters <i class="fas fa-bars"></i></button>
+          </li>
+        </ul>
       </div>
-    </header>
-    <nav>
-      <div class="second-bar">
-        <div>
-          <ul>
-            <li>
-              <button>Sort by <i class="fas fa-arrow-down"></i></button>
-            </li>
-            <li>
-              <button>Filters <i class="fas fa-bars"></i></button>
-            </li>
-          </ul>
-        </div>
-        <div class="add-employee">
-          <button id="addEmployee">
-            <i class="fas fa-plus"></i> Add employee
-          </button>
-        </div>
+      <div class="add-employee">
+        <button id="add-employee-btn">
+          <i class="fas fa-plus"></i> Add employee
+        </button>
       </div>
-    </nav>
-    <div class="dashboard">
-      <section id="employees-profile">
-        <div>
-          <ul>
-            <li>
-              <div class="info-card">
-                <div class="info-card-header clearfix">
-                  <div>
-                    <h2>Juan David Rodriguez</h2>
-                    <h3>Senior Technician</h3>
-                  </div>
-                </div>
-                <div class="info-card-container">
-                  <section id="infoCardProjectForm">
-                    <form action="">
-                      <label for="projectName">Project</label>
-                      <input
-                        list="projects"
-                        name="project-name"
-                        value="McClatchy"
-                      />
-                      <datalist id="project-list">
-                        <option value="McClatchy"></option>
-                        <option value="Project2"></option>
-                        <option value="Project3"></option>
-                      </datalist>
-                    </form>
-                  </section>
-                  <section id="infoCardStacks">
-                    <h3>Stacks</h3>
-                    <ul id="stacksList">
-                      <li class="back-end">Backend</li>
-                      <li class="mobile">Mobile</li>
-                      <li class="front-end">Front End</li>
-                    </ul>
-                  </section>
-                  <section id="infoCardTechnologies">
-                    <h3>Technologies</h3>
-                    <ul id="technologiesList">
-                      <li class="back-end">Java</li>
-                      <li class="back-end">.Net</li>
-                      <li class="front-end">Angular</li>
-                      <li class="front-end">React</li>
-                    </ul>
-                  </section>
+    </div>
+  </nav>
+  <div class="dashboard">
+    <section id="employees-profile">
+      <div>
+        <ul>
+          <li>
+            <div class="info-card">
+              <div class="info-card-header clearfix">
+                <div>
+                  <h2>Juan David Rodriguez</h2>
+                  <h3>Senior Technician</h3>
                 </div>
               </div>
-            </li>
-            <li>
-              <div class="info-card">
-                <div class="info-card-header">
+              <div class="info-card-container">
+                <section id="infoCardProjectForm">
+                  <form action="">
+                    <label for="project-name">Project</label>
+                    <input type="list" name="project-name" value="McClatchy" placeholder="McClatchy" />
+                  </form>
+                  <form action="">
+                    <label for="english">English</label>
+                    <input type="text" name="english" id="english" placeholder="C1">
+                  </form>
+                </section>
+                <section id="infoCardStacks">
+                  <h3>Stacks</h3>
+                  <ul id="stacksList">
+                    <li class="back-end">Backend</li>
+                    <li class="mobile">Mobile</li>
+                    <li class="front-end">Front End</li>
+                  </ul>
+                </section>
+                <section id="infoCardTechnologies">
+                  <h3>Technologies</h3>
+                  <ul id="technologiesList">
+                    <li class="back-end">Java</li>
+                    <li class="back-end">.Net</li>
+                    <li class="front-end">Angular</li>
+                    <li class="front-end">React</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="info-card">
+              <div class="info-card-header">
+                <div>
                   <h2>Work information</h2>
                 </div>
-                <div class="info-card-container">
-                  <section id="infoCardWorkInfo">
-                    <form>
-                      <label for="join-date">Join Date</label>
-                      <input
-                        name="join-date"
-                        id="join-date"
-                        type="date"
-                        value=""
-                      />
-
-                      <label for="start-grade">Start Grade</label>
-                      <input type="list" name="grades" />
-                      <datalist>
-                        <option value="Techinician"></option>
-                      </datalist>
-                    </form>
-                  </section>
-                </div>
               </div>
-            </li>
-            <li>
-              <div class="info-card">
-                <div class="info-card-header">
+              <div class="info-card-container">
+                <section id="infoCardWorkInfo">
+                  <form>
+                    <label for="join-date">Join Date</label>
+                    <input name="join-date" id="join-date" type="date" value="" />
+
+                    <label for="start-grade">Start Grade</label>
+                    <input type="list" name="grades" />
+                    <datalist>
+                      <option value="Techinician"></option>
+                    </datalist>
+                  </form>
+                </section>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="info-card">
+              <div class="info-card-header">
+                <div>
                   <h2>Compensation</h2>
                 </div>
-                <div class="info-card-container">
-                  <section id="infoCardWorkInfo">
-                    <form>
-                      <label for="entry-salary">Entry Salary</label>
-                      <input
-                        type="text"
-                        name="currency-field"
-                        id="currency-field"
-                        class="salary"
-                        placeholder="$1,000,000.00"
-                      />
+              </div>
+              <div class="info-card-container">
+                <section id="infoCardWorkInfo">
+                  <form>
+                    <label for="entry-salary">Entry Salary</label>
+                    <input type="text" name="currency-field" id="currency-field" class="salary"
+                      placeholder="$1,000,000.00" />
 
-                      <label for="prev-salary">Prev Salary</label>
-                      <input
-                        type="text"
-                        name="prev-salaty"
-                        id="prev-salary"
-                        class="salary"
-                        placeholder="$2.900.000"
-                      />
+                    <label for="prev-salary">Prev Salary</label>
+                    <input type="text" name="prev-salaty" id="prev-salary" class="salary" placeholder="$2.900.000" />
 
-                      <label for="last-promo">Last Promotion</label>
-                      <input type="date" id="last-promo" name="last-promo" />
+                    <label for="last-promo">Last Promotion</label>
+                    <input type="date" id="last-promo" name="last-promo" />
 
-                      <label for="current-salary">Current Salary</label>
-                      <input
-                        type="text"
-                        name="current-salary"
-                        id="current-salary"
-                        class="salary"
-                        placeholder="$3.500.000"
-                      />
+                    <label for="current-salary">Current Salary</label>
+                    <input type="text" name="current-salary" id="current-salary" class="salary"
+                      placeholder="$3.500.000" />
 
-                      <label for="last-increment">Last Increment</label>
-                      <input
-                        type="text"
-                        name="last-increment"
-                        id="last-increment"
-                        placeholder="3.0"
-                      />
-                    </form>
-                  </section>
+                    <label for="last-increment">Last Increment</label>
+                    <input type="text" name="last-increment" id="last-increment" placeholder="3.0" />
+                  </form>
+                </section>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="filled-btn">Save Profile</button>
+      <button class="transparent-btn">Cancel</button>
+      
+    </section>
+    <section id="timeLine">
+      <h1>Time Line</h1>
+      <div id="plusBtn">
+        <button><i class="fas fa-plus"></i></button>
+      </div>
+      <div class="timeline-cards">
+        <ul>
+          <li class="timeline-card-item">
+            <div>
+              <h3>January<br />2020</h3>
+            </div>
+            <div>
+              <button class="circle-btn"></button>
+              <div class="timeline-card-info">
+                <div class="timeline-card-info-header">
+                  <h3>1:1</h3>
+                  <p>Mar 11, 2019 at 4:11 PM</p>
+                </div>
+                <div class="timeline-card-info content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolores, nisi sapiente accusantium ea adipisci totam quos
+                    qui sint natus nesciunt reiciendis quas distinctio
+                    similique eos facere porro ducimus enim impedit.
+                  </p>
                 </div>
               </div>
-            </li>
-          </ul>
-          <section class="optn-btns-employeers">
-            <button>Cancel</button>
-            <button>Save Profile</button>
-          </section>
-        </div>
-      </section>
-      <section id="timeLine">
-        <div id="plusBtn">
-          <button><i class="fas fa-plus"></i></button>
-        </div>
-        <div class="timeline-cards">
-          <ul>
-            <li class="timeline-card-item">
-              <div>
-                <h3>January<br />2020</h3>
-              </div>
-              <div>
-                <button class="circle-btn"></button>
-                <div class="timeline-card-info">
-                  <div class="timeline-card-info-header">
-                    <h3>1:1</h3>
-                    <p>Mar 11, 2019 at 4:11 PM</p>
-                  </div>
-                  <div class="timeline-card-info content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Dolores, nisi sapiente accusantium ea adipisci totam quos
-                      qui sint natus nesciunt reiciendis quas distinctio
-                      similique eos facere porro ducimus enim impedit.
-                    </p>
-                  </div>
+            </div>
+          </li>
+          <li class="timeline-card-item">
+            <div>
+              <h3>January<br />2020</h3>
+            </div>
+            <div>
+              <button class="circle-btn"></button>
+              <div class="timeline-card-info">
+                <div class="timeline-card-info-header">
+                  <h3>1:1</h3>
+                  <p>Mar 11, 2019 at 4:11 PM</p>
+                </div>
+                <div class="timeline-card-info content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolores, nisi sapiente accusantium ea adipisci totam quos
+                    qui sint natus nesciunt reiciendis quas distinctio
+                    similique eos facere porro ducimus enim impedit.
+                  </p>
                 </div>
               </div>
-            </li>
-            <li class="timeline-card-item">
-              <div>
-                <h3>January<br />2020</h3>
-              </div>
-              <div>
-                <button class="circle-btn"></button>
-                <div class="timeline-card-info">
-                  <div class="timeline-card-info-header">
-                    <h3>1:1</h3>
-                    <p>Mar 11, 2019 at 4:11 PM</p>
-                  </div>
-                  <div class="timeline-card-info content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Dolores, nisi sapiente accusantium ea adipisci totam quos
-                      qui sint natus nesciunt reiciendis quas distinctio
-                      similique eos facere porro ducimus enim impedit.
-                    </p>
-                  </div>
+            </div>
+          </li>
+          <li class="timeline-card-item">
+            <div>
+              <h3>January<br />2020</h3>
+            </div>
+            <div>
+              <button class="circle-btn"></button>
+              <div class="timeline-card-info">
+                <div class="timeline-card-info-header">
+                  <h3>1:1</h3>
+                  <p>Mar 11, 2019 at 4:11 PM</p>
+                </div>
+                <div class="timeline-card-info content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolores, nisi sapiente accusantium ea adipisci totam quos
+                    qui sint natus nesciunt reiciendis quas distinctio
+                    similique eos facere porro ducimus enim impedit.
+                  </p>
                 </div>
               </div>
-            </li>
-            <li class="timeline-card-item">
-              <div>
-                <h3>January<br />2020</h3>
-              </div>
-              <div>
-                <button class="circle-btn"></button>
-                <div class="timeline-card-info">
-                  <div class="timeline-card-info-header">
-                    <h3>1:1</h3>
-                    <p>Mar 11, 2019 at 4:11 PM</p>
-                  </div>
-                  <div class="timeline-card-info content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Dolores, nisi sapiente accusantium ea adipisci totam quos
-                      qui sint natus nesciunt reiciendis quas distinctio
-                      similique eos facere porro ducimus enim impedit.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <script
-      src="https://kit.fontawesome.com/be030012a7.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script src="https://kit.fontawesome.com/be030012a7.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
