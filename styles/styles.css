@@ -18,6 +18,15 @@ html {
   box-sizing: border-box;
 }
 
+.clearfix{
+  overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 li {
   list-style: none;
 }
@@ -72,7 +81,7 @@ header {
   background-color: var(--header-bg-color);
   justify-content: space-between;
 }
-header div{
+header div {
   padding: 0 1.1em;
 }
 
@@ -84,11 +93,12 @@ header div.navbar {
 header div.navbar a.nav-btn {
   color: var(--main-bg-color);
   padding: 1em;
-  margin:0 .3em;
+  margin: 0 0.3em;
 }
 
 header div.navbar a.nav-btn:hover {
   background-color: var(--btn-color);
+  transition: 0.5s ease;
 }
 
 header div.login-bars {
@@ -96,20 +106,20 @@ header div.login-bars {
   align-items: center;
 }
 
-div.login-bars a i{
+div.login-bars a i {
   color: var(--main-bg-color);
 }
 
-div.login-bars a i.fa-search{
-  margin: 0 .5em;
+div.login-bars a i.fa-search {
+  margin: 0 0.5em;
 }
 
 header div.login-bars a span {
   color: black;
-  background-color:var(--main-bg-color);
-  padding: .5em;
+  background-color: var(--main-bg-color);
+  padding: 0.5em;
   border-radius: 100%;
-  margin: 0 .2em;
+  margin: 0 0.2em;
 }
 
 /* SECOND BAR */
@@ -133,11 +143,11 @@ div.second-bar div ul li {
 .second-bar button {
   border: none;
   background-color: transparent;
-  padding: 1.5em .5em;
+  padding: 1.5em 0.5em;
   margin: 0 1em;
 }
 
-.second-bar button:hover{
+.second-bar button:hover {
   background-color: var(--btn-color);
   color: var(--main-bg-color);
   transition: 0.5s ease;
@@ -173,18 +183,19 @@ section#employees-profile > div {
   box-shadow: 0px 0px 10px 3px rgba(204, 204, 204, 1);
   margin-bottom: 1.5em;
 }
-section#employees-profile > button {
+section#employees-profile > section {
   float: right;
+  margin-bottom: 2em;
 }
 
 div.info-card-container section {
   margin-bottom: 1.5em;
 }
-div.info-card div.info-card-header {
+div.info-card-header {
   background-color: var(--header-card-color);
 }
 
-div.info-card div.info-card-header > div,
+div.info-card-header > div,
 div.info-card-container {
   margin: 0 1.6em 0 1.6em;
 }
@@ -229,7 +240,6 @@ section#timeLine {
   box-shadow: 0px 0px 10px 3px rgba(204, 204, 204, 1);
   margin-bottom: 1.5em;
 }
-
 .back-end {
   background-color: dodgerblue;
   color: white;
@@ -251,14 +261,23 @@ section#timeLine {
   margin: 0.2rem;
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
+
+/* Timeline */
+#plusBtn{
+  display: flex;
+  justify-content: flex-end;
+}
+#plusBtn button {
+  padding: 0.8em 1.0em;
+  border-radius: 100px;
+  background-color: var(--btn-color);
+  color: var(--main-bg-color);
+  border: none;
 }
 
-.clearfix:after {
-  clear: both;
+.circle-btn{
+  box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
+  padding: 1em;
+  border: none;
+  border-radius: 50px;
 }
