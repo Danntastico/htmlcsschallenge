@@ -10,6 +10,8 @@ html {
   --second-bar-color: #ffffff;
   --header-card-color: #e0e8eb;
   --header-bg-color: #000000;
+  --frontend-color: #690505;
+  --timeline-point: #48545b;
   font-family: "Roboto", sans-serif;
 }
 *,
@@ -18,7 +20,7 @@ html {
   box-sizing: border-box;
 }
 
-.clearfix{
+.clearfix {
   overflow: auto;
 }
 .clearfix::after {
@@ -121,6 +123,10 @@ header div.login-bars a span {
   border-radius: 100%;
   margin: 0 0.2em;
 }
+
+
+
+
 
 /* SECOND BAR */
 nav {
@@ -261,23 +267,120 @@ section#timeLine {
   margin: 0.2rem;
 }
 
+/* TIMELINE*/
+.timeline {
+  position: relative;
+  border: solid 1px var(--header-card-color);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+}
+.timeline-title h1 {
+  padding: 20px 10px;
+}
+.timeline-title {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 1em;
+}
 
-/* Timeline */
-#plusBtn{
+#plusBtn {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 #plusBtn button {
-  padding: 0.8em 1.0em;
+  padding: 0.8em 1em;
   border-radius: 100px;
   background-color: var(--btn-color);
   color: var(--main-bg-color);
   border: none;
 }
+.timeline-fichas{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 0.5em 1em;
+}
+
+.timeline-fichas .container {
+  position: relative;
+  width: 90%;
+  border: solid 1px var(--header-card-color);
+  border-radius: 5px;
+  box-shadow: 7px 8px 10px 1px rgba(0,0,0,0.27);
+  margin: 1em 1em;
+}
+
+.timeline-fichas .container::after {
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.27);
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -30px;
+  top: 10px;
+  border-radius: 50%;
+  z-index: 1;
+  margin-top: 20px;
+  background-color:  var(--timeline-point);
+}
+
+
+
+
+/* .timeline{
+  position: relative;
+}
 
 .circle-btn{
-  box-shadow: 10px 10px 22px -11px rgba(0,0,0,0.75);
   padding: 1em;
   border: none;
   border-radius: 50px;
+}
+
+.container::after{
+  margin: 1em 0em;
+  position: relative;
+  background-color: inherit;
+  border-radius: 10px;
+  width: 70%;
+}
+
+
+.container::after{
+  box-shadow: 7px 8px 10px 1px rgba(0,0,0,0.27);
+  border: solid 1px var(--header-card-color);
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -30px;
+  background-color:  var(--timeline-point);
+  top: 10px;
+  border-radius: 50px;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+*/
+
+.content h3,
+p {
+  padding: 0.5em 1.2em;
+}
+.timeline-fichas .content .timeline-header {
+  border-bottom: solid 1px var(--header-card-color);
+  display: flex;
+  justify-content: space-between;
+}
+.timeline-fichas .content .timeline-header p {
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  color: var(--timeline-point);
 }
