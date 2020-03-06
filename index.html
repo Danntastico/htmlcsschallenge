@@ -1,245 +1,220 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <div class="navbar">
-        <a href="#"><img src="img/duck.png" alt=""/></a>
-        <a href="#" class="nav-btn">Employees</a>
-        <a href="#" class="nav-btn">Budget</a>
-      </div>
-      <div class="login-bars">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="#"><span>LS</span><i class="fas fa-arrow-down"></i></a>
-      </div>
-    </header>
-    <nav>
-      <div class="second-bar">
-        <div>
-          <ul>
-            <li>
-              <button>Sort by <i class="fas fa-arrow-down"></i></button>
-            </li>
-            <li>
-              <button>Filters <i class="fas fa-bars"></i></button>
-            </li>
-          </ul>
-        </div>
-        <div class="add-employee">
-          <button id="add-employee-btn">
-            <i class="fas fa-plus"></i> Add employee
-          </button>
-        </div>
-      </div>
-    </nav>
-    <div class="dashboard">
-      <section id="employees-profile">
-        <div>
-          <ul>
-            <li>
-              <div class="info-card">
-                <div class="info-card-header clearfix">
-                  <div>
-                    <h2>Juan David Rodriguez</h2>
-                    <h3>Senior Technician</h3>
-                  </div>
-                </div>
-                <div class="info-card-container">
-                  <section id="infoCardProjectForm">
-                    <form action="">
-                      <label for="project-name">Project</label>
-                      <input
-                        type="list"
-                        name="project-name"
-                        value="McClatchy"
-                        placeholder="McClatchy"
-                      />
-                    </form>
-                    <form action="">
-                      <label for="english">English</label>
-                      <input
-                        type="text"
-                        name="english"
-                        id="english"
-                        placeholder="C1"
-                      />
-                    </form>
-                  </section>
-                  <section id="infoCardStacks">
-                    <h3>Stacks</h3>
-                    <ul id="stacksList">
-                      <li class="back-end">Backend</li>
-                      <li class="mobile">Mobile</li>
-                      <li class="front-end">Front End</li>
-                    </ul>
-                  </section>
-                  <section id="infoCardTechnologies">
-                    <h3>Technologies</h3>
-                    <ul id="technologiesList">
-                      <li class="back-end">Java</li>
-                      <li class="back-end">.Net</li>
-                      <li class="front-end">Angular</li>
-                      <li class="front-end">React</li>
-                    </ul>
-                  </section>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="info-card">
-                <div class="info-card-header">
-                  <div>
-                    <h2>Work information</h2>
-                  </div>
-                </div>
-                <div class="info-card-container">
-                  <section id="infoCardWorkInfo">
-                    <form>
-                      <label for="join-date">Join Date</label>
-                      <input
-                        name="join-date"
-                        id="join-date"
-                        type="date"
-                        value=""
-                      />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</head>
 
-                      <label for="start-grade">Start Grade</label>
-                      <input type="list" name="grades" />
-                      <datalist>
-                        <option value="Techinician"></option>
-                      </datalist>
-                    </form>
-                  </section>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="info-card">
-                <div class="info-card-header">
-                  <div>
-                    <h2>Compensation</h2>
-                  </div>
-                </div>
-                <div class="info-card-container">
-                  <section id="infoCardWorkInfo">
-                    <form>
-                      <label for="entry-salary">Entry Salary</label>
-                      <input
-                        type="text"
-                        name="currency-field"
-                        id="currency-field"
-                        class="salary"
-                        placeholder="$1,000,000.00"
-                      />
-
-                      <label for="prev-salary">Prev Salary</label>
-                      <input
-                        type="text"
-                        name="prev-salaty"
-                        id="prev-salary"
-                        class="salary"
-                        placeholder="$2.900.000"
-                      />
-
-                      <label for="last-promo">Last Promotion</label>
-                      <input type="date" id="last-promo" name="last-promo" />
-
-                      <label for="current-salary">Current Salary</label>
-                      <input
-                        type="text"
-                        name="current-salary"
-                        id="current-salary"
-                        class="salary"
-                        placeholder="$3.500.000"
-                      />
-
-                      <label for="last-increment">Last Increment</label>
-                      <input
-                        type="text"
-                        name="last-increment"
-                        id="last-increment"
-                        placeholder="3.0"
-                      />
-                    </form>
-                  </section>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <section>
-          <button class="transparent-btn">Cancel</button>
-          <button class="filled-btn">Save Profile</button>
-        </section>
-      </section>
-      <section class="timeline">
-        <div class="timeline-title info-card-header">
-          <h1>Timeline</h1>
-        </div>
-        <div class="timeline-fichas">
-          <div id="plusBtn" class="clearfix">
-            <button><i class="fas fa-plus"></i></button>
-          </div>
-          <div class="container">
-            <div class="content">
-              <div class="timeline-header">
-                <h3>1:1</h3>
-                <p>Mar 11, 2019 at 4:11 PM</p>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
-                nisi sapiente accusantium ea adipisci totam quos qui sint natus
-                nesciunt reiciendis quas distinctio similique eos facere porro
-                ducimus enim impedit.
-              </p>
-            </div>
-          </div>
-          <div class="container">
-            <div class="content">
-              <div class="timeline-header">
-                <h3>1:1</h3>
-                <p>Mar 11, 2019 at 4:11 PM</p>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
-                nisi sapiente accusantium ea adipisci totam quos qui sint natus
-                nesciunt reiciendis quas distinctio similique eos facere porro
-                ducimus enim impedit.
-              </p>
-            </div>
-          </div>
-          <div class="container">
-            <div class="content">
-              <div class="timeline-header">
-                <h3>1:1</h3>
-                <p>Mar 11, 2019 at 4:11 PM</p>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
-                nisi sapiente accusantium ea adipisci totam quos qui sint natus
-                nesciunt reiciendis quas distinctio similique eos facere porro
-                ducimus enim impedit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="#"><img src="img/duck.png" alt="" /></a>
+      <a href="#" class="nav-btn">Employees</a>
+      <a href="#" class="nav-btn">Budget</a>
     </div>
-    <script
-      src="https://kit.fontawesome.com/be030012a7.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <div class="login-bars">
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><span>LS</span><i class="fas fa-arrow-down"></i></a>
+    </div>
+  </header>
+  <nav>
+    <div class="second-bar">
+      <div>
+        <ul>
+          <li>
+            <button>Sort by <i class="fas fa-arrow-down"></i></button>
+          </li>
+          <li>
+            <button>Filters <i class="fas fa-bars"></i></button>
+          </li>
+        </ul>
+      </div>
+      <div class="add-employee">
+        <button id="add-employee-btn">
+          <i class="fas fa-plus"></i> Add employee
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="dashboard">
+    <section id="employees-profile">
+      <div>
+        <ul>
+          <li>
+            <div class="info-card">
+              <div class="info-card-header clearfix">
+                <div>
+                  <h2>Juan David Rodriguez</h2>
+                  <h3>Senior Technician</h3>
+                </div>
+              </div>
+              <div class="info-card-container">
+                <section id="infoCardProjectForm" class="form-style">
+                  <form action="">
+                    <label for="project-name">Project</label>
+                    <input type="text" name="project-name" value="McClatchy" placeholder="McClatchy" />
+                  </form>
+                  <form action="">
+                    <label for="english">English</label>
+                    <input type="text" name="english" id="english" placeholder="C1" />
+                  </form>
+                </section>
+                <section id="infoCardStacks">
+                  <h3>Stacks</h3>
+                  <ul id="stacksList">
+                    <li class="back-end">Backend</li>
+                    <li class="mobile">Mobile</li>
+                    <li class="front-end">Front End</li>
+                  </ul>
+                </section>
+                <section id="infoCardTechnologies">
+                  <h3>Technologies</h3>
+                  <ul id="technologiesList">
+                    <li class="back-end">Java</li>
+                    <li class="back-end">.Net</li>
+                    <li class="front-end">Angular</li>
+                    <li class="front-end">React</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="info-card">
+              <div class="info-card-header">
+                <div>
+                  <h2>Work information</h2>
+                </div>
+              </div>
+              <div class="info-card-container">
+                <section id="infoCardWorkInfo" class="form-style">
+                  <form>
+                    <label for="join-date">Join Date</label>
+                    <input name="join-date" id="join-date" type="date" value="" />
+                  </form>
+                  <form>
+                    <label for="start-grade">Start Grade</label>
+                    <input type="list" name="grades" placeholder="Technician" />
+                  </form>
+                </section>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="info-card">
+              <div class="info-card-header">
+                <div>
+                  <h2>Compensation</h2>
+                </div>
+              </div>
+              <div class="info-card-container">
+                <section class="form-style">
+                  <form>
+                    <label for="entry-salary">Entry Salary</label>
+                    <input type="text" name="currency-field" id="currency-field" class="salary"
+                      placeholder="$1,000,000.00" />
+                  </form>
+                  <form>
+                    <label for="tenure">Tenure</label>
+                    <input type="text" name="currency-field" id="tenure" 
+                      placeholder="3.38" />
+                  </form>
+                </section>
+                <section class="form-style">
+                  <form>
+                    <label for="prev-salary">Prev Salary</label>
+                    <input type="text" name="prev-salaty" id="prev-salary" class="salary" placeholder="$2.900.000" />
+                  </form>
+                  <form>
+
+                    <label for="last-promo">Last Promotion</label>
+                    <input type="date" id="last-promo" name="last-promo" />
+                  </form>
+                </section>
+                <section class="form-style">
+                  <form>
+
+                    <label for="current-salary">Current Salary</label>
+                    <input type="text" name="current-salary" id="current-salary" class="salary"
+                      placeholder="$3.500.000" />
+                  </form>
+                  <form>
+
+                  <label for="last-increment">Last Increment</label>
+                  <input type="text" name="last-increment" id="last-increment" placeholder="3.0" />
+                  </form>
+                </section>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <section>
+        <button class="transparent-btn">Cancel</button>
+        <button class="filled-btn">Save Profile</button>
+      </section>
+    </section>
+    <section class="timeline">
+      <div class="timeline-title info-card-header">
+        <h1>Timeline</h1>
+      </div>
+      <div class="timeline-fichas">
+        <div id="plusBtn" class="clearfix">
+          <button><i class="fas fa-plus"></i></button>
+        </div>
+        <h2>Julio</h2>
+        <div class="container">
+          <div class="content">
+            <div class="timeline-header">
+              <h3>1:1</h3>
+              <p>Mar 11, 2019 at 4:11 PM</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nisi sapiente accusantium ea adipisci totam quos qui sint natus
+              nesciunt reiciendis quas distinctio similique eos facere porro
+              ducimus enim impedit.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="content">
+            <div class="timeline-header">
+              <h3>1:1</h3>
+              <p>Mar 11, 2019 at 4:11 PM</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nisi sapiente accusantium ea adipisci totam quos qui sint natus
+              nesciunt reiciendis quas distinctio similique eos facere porro
+              ducimus enim impedit.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="content">
+            <div class="timeline-header">
+              <h3>1:1</h3>
+              <p>Mar 11, 2019 at 4:11 PM</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
+              nisi sapiente accusantium ea adipisci totam quos qui sint natus
+              nesciunt reiciendis quas distinctio similique eos facere porro
+              ducimus enim impedit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://kit.fontawesome.com/be030012a7.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
